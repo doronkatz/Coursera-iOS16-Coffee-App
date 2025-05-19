@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C4C28C7A2DDBF11C007B8A4F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C4B0E8EE2DD40B300075F8D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,36 @@
 		C4B0E8F72DD40B300075F8D7 /* MyCoffeeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCoffeeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C4C28C692DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Domain/HomeViewModel.swift,
+				Network/FirebaseRepository.swift,
+				Presentation/ViewComponents/DrinkRow.swift,
+				Presentation/ViewComponents/RemoteImageView.swift,
+			);
+			target = C4B0E8EC2DD40B300075F8D7 /* MyCoffeeAppTests */;
+		};
+		C4C28C6A2DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Domain/HomeViewModel.swift,
+				Network/FirebaseRepository.swift,
+				Presentation/ViewComponents/DrinkRow.swift,
+				Presentation/ViewComponents/RemoteImageView.swift,
+			);
+			target = C4B0E8F62DD40B300075F8D7 /* MyCoffeeAppUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C4B0E8E12DD40B2F0075F8D7 /* MyCoffeeApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C4C28C692DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppTests" target */,
+				C4C28C6A2DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppUITests" target */,
+			);
 			path = MyCoffeeApp;
 			sourceTree = "<group>";
 		};
@@ -52,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C28C7A2DDBF11C007B8A4F /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +144,7 @@
 			);
 			name = MyCoffeeApp;
 			packageProductDependencies = (
+				C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */,
 			);
 			productName = MyCoffeeApp;
 			productReference = C4B0E8DF2DD40B2F0075F8D7 /* MyCoffeeApp.app */;
@@ -195,6 +228,9 @@
 			);
 			mainGroup = C4B0E8D62DD40B2F0075F8D7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C4B0E8E02DD40B2F0075F8D7 /* Products */;
 			projectDirPath = "";
@@ -593,6 +629,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4B0E8D72DD40B2F0075F8D7 /* Project object */;
 }
