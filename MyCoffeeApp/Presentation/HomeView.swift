@@ -41,8 +41,13 @@ struct HomeView: View {
                 .blur(radius: isShowingDetail ? 5 : 0)
                 .disabled(isShowingDetail)
             }
-            if isShowingDetail {
-                Text("This is the Detail View")
+            if isShowingDetail, let drink = viewModel.selectedDrink {
+                DrinkDetailView(
+                    drink: drink,
+                    isShowingDetail: $isShowingDetail
+                )
+               
+                
             }
         }
      
