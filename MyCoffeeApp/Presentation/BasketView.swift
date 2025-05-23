@@ -8,11 +8,45 @@
 import SwiftUI
 
 struct BasketView: View {
+    @EnvironmentObject var basket: BasketViewModel
+    @ViewBuilder private func placeOrderButton() -> some View {
+        Button{
+            Task{ //fire synchronously
+                await basket.createOrder(for: DummyData.user)
+            }
+        } label:{
+            Text("\(basket.totalPrice, format: .currency(code: "USD")) - Place Order")
+        }
+        .buttonStyle(.borderedProminent)
+        .padding(.bottom, 30)
+    }
+     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            ZStack{
+                VStack{
+                    List{
+                        ForEach(basket.items){ drink in
+                            DrinkRow(drink, {})
+                        }
+                        .onDelete(perform: basket.deleteItems)
+                    }
+                    .listStyle(.grouped)
+                    .safeAreaInset(edge: .bottom) {
+                        
+                    }
+                }
+                if basket.items.isEmpty {
+                    EmptyBasketView(message: "Basket is Empty")
+                        
+                }
+            }
+            .navigationTitle("🛒 Basket")
+        }
     }
 }
 
 #Preview {
     BasketView()
+        .environmentObject(BasketViewModel())
 }

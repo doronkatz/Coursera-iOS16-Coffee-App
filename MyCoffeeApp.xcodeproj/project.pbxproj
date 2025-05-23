@@ -37,9 +37,11 @@
 		C4C28C692DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Domain/BasketViewModel.swift,
 				Domain/HomeViewModel.swift,
 				Network/FirebaseRepository.swift,
 				Presentation/ViewComponents/DrinkRow.swift,
+				Presentation/ViewComponents/EmptyBasketView.swift,
 				Presentation/ViewComponents/RemoteImageView.swift,
 			);
 			target = C4B0E8EC2DD40B300075F8D7 /* MyCoffeeAppTests */;
@@ -47,9 +49,11 @@
 		C4C28C6A2DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Domain/BasketViewModel.swift,
 				Domain/HomeViewModel.swift,
 				Network/FirebaseRepository.swift,
 				Presentation/ViewComponents/DrinkRow.swift,
+				Presentation/ViewComponents/EmptyBasketView.swift,
 				Presentation/ViewComponents/RemoteImageView.swift,
 			);
 			target = C4B0E8F62DD40B300075F8D7 /* MyCoffeeAppUITests */;

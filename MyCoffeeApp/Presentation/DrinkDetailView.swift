@@ -10,6 +10,7 @@ import SwiftUI
 struct DrinkDetailView: View {
     let drink: Drink
     @Binding var isShowingDetail: Bool
+    @EnvironmentObject var basket: BasketViewModel
     
     @ViewBuilder
     private func dismissButton () -> some View {
@@ -26,6 +27,7 @@ struct DrinkDetailView: View {
     @ViewBuilder
     private func addToBasketButton () -> some View {
         Button {
+            basket.add(drink: drink)
             isShowingDetail = false
         } label: {
             Text("\(drink.price, format: .currency(code: "USD")) - Add to basket")
