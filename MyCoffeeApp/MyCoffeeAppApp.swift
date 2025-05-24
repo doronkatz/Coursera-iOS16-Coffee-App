@@ -13,6 +13,7 @@ struct MyCoffeeAppApp: App {
         WindowGroup {
             AppTabView()
                 .environmentObject(BasketViewModel())
+                .environmentObject(UserRepository())
         }
     }
 }

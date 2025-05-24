@@ -1,6 +1,15 @@
 {
-  "originHash" : "d84e3856bb7f70982a9430d07414ec741af47418ccacd0c9f550e7d2b8eedd2d",
+  "originHash" : "d883fa7e22c108c8567c254434c156b94a390315ace36c0d0b84224e2659f0ba",
   "pins" : [
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeyChainAccess.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e0c7eebc5a4465a3c4680764f26b7a61f567cdaf"
+      }
+    },
     {
       "identity" : "swiftui-cached-async-image",
       "kind" : "remoteSourceControl",

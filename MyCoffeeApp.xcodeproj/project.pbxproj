@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4C28C7A2DDBF11C007B8A4F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */; };
+		C445B07A2DE1741900F40B14 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C445B0792DE1741900F40B14 /* KeychainAccess */; };
+		C445B07D2DE1742F00F40B14 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C445B07C2DE1742F00F40B14 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,24 +38,30 @@
 		C4C28C692DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Domain/AccountViewModel.swift,
 				Domain/BasketViewModel.swift,
 				Domain/HomeViewModel.swift,
 				Network/FirebaseRepository.swift,
 				Presentation/ViewComponents/DrinkRow.swift,
 				Presentation/ViewComponents/EmptyBasketView.swift,
 				Presentation/ViewComponents/RemoteImageView.swift,
+				Utilities/SecureStorage.swift,
+				Utilities/UserRepository.swift,
 			);
 			target = C4B0E8EC2DD40B300075F8D7 /* MyCoffeeAppTests */;
 		};
 		C4C28C6A2DDBDF84007B8A4F /* Exceptions for "MyCoffeeApp" folder in "MyCoffeeAppUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Domain/AccountViewModel.swift,
 				Domain/BasketViewModel.swift,
 				Domain/HomeViewModel.swift,
 				Network/FirebaseRepository.swift,
 				Presentation/ViewComponents/DrinkRow.swift,
 				Presentation/ViewComponents/EmptyBasketView.swift,
 				Presentation/ViewComponents/RemoteImageView.swift,
+				Utilities/SecureStorage.swift,
+				Utilities/UserRepository.swift,
 			);
 			target = C4B0E8F62DD40B300075F8D7 /* MyCoffeeAppUITests */;
 		};
@@ -87,7 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4C28C7A2DDBF11C007B8A4F /* CachedAsyncImage in Frameworks */,
+				C445B07A2DE1741900F40B14 /* KeychainAccess in Frameworks */,
+				C445B07D2DE1742F00F40B14 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +156,8 @@
 			);
 			name = MyCoffeeApp;
 			packageProductDependencies = (
-				C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */,
+				C445B0792DE1741900F40B14 /* KeychainAccess */,
+				C445B07C2DE1742F00F40B14 /* CachedAsyncImage */,
 			);
 			productName = MyCoffeeApp;
 			productReference = C4B0E8DF2DD40B2F0075F8D7 /* MyCoffeeApp.app */;
@@ -233,7 +242,8 @@
 			mainGroup = C4B0E8D62DD40B2F0075F8D7;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				C445B0782DE1741900F40B14 /* XCRemoteSwiftPackageReference "KeyChainAccess" */,
+				C445B07B2DE1742F00F40B14 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C4B0E8E02DD40B2F0075F8D7 /* Products */;
@@ -635,7 +645,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+		C445B0782DE1741900F40B14 /* XCRemoteSwiftPackageReference "KeyChainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeyChainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C445B07B2DE1742F00F40B14 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
 			requirement = {
@@ -646,9 +664,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C4C28C792DDBF11C007B8A4F /* CachedAsyncImage */ = {
+		C445B0792DE1741900F40B14 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4C28C782DDBF11C007B8A4F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			package = C445B0782DE1741900F40B14 /* XCRemoteSwiftPackageReference "KeyChainAccess" */;
+			productName = KeychainAccess;
+		};
+		C445B07C2DE1742F00F40B14 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C445B07B2DE1742F00F40B14 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */

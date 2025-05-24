@@ -9,10 +9,11 @@ import SwiftUI
 
 struct BasketView: View {
     @EnvironmentObject var basket: BasketViewModel
+    @EnvironmentObject var userRepository: UserRepository
     @ViewBuilder private func placeOrderButton() -> some View {
         Button{
             Task{ //fire synchronously
-                await basket.createOrder(for: DummyData.user)
+                await basket.createOrder(for: userRepository.user)
             }
         } label:{
             Text("\(basket.totalPrice, format: .currency(code: "USD")) - Place Order")

@@ -14,7 +14,7 @@ final class FirebaseRepository {
     }
     
     func placeOrder(_ order: Order) async {
-        print("Place an order with id: \(order.id)" )
+        print("Place an order with: \(order.customerName)" )
         for item in order.items {
             print("item name: \(item.name)")
         }
