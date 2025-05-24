@@ -28,4 +28,8 @@ final class HomeViewModel: ObservableObject {
     func selectDrink(_ drink: Drink) {
         selectedDrink = drink
     }
+    
+    func saveMenu(){
+        firebaseRepository.saveDrinks()
+    }
 }

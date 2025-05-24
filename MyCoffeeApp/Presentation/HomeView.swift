@@ -40,6 +40,9 @@ struct HomeView: View {
                 .task(viewModel.fetchDrinks)
                 .blur(radius: isShowingDetail ? 5 : 0)
                 .disabled(isShowingDetail)
+                .onAppear{
+                    viewModel.saveMenu()
+                }
             }
             if isShowingDetail, let drink = viewModel.selectedDrink {
                 DrinkDetailView(
