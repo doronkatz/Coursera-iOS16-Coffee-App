@@ -30,6 +30,6 @@ final class HomeViewModel: ObservableObject {
     }
     
     func saveMenu(){
-        firebaseRepository.saveDrinks()
+        //firebaseRepository.saveDrinks()
     }
 }

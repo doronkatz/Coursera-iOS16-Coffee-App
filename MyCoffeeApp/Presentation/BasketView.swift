@@ -40,9 +40,14 @@ struct BasketView: View {
                 if basket.items.isEmpty {
                     EmptyBasketView(message: "Basket is Empty")
                         
+                }else{
+                    placeOrderButton()
                 }
             }
             .navigationTitle("🛒 Basket")
+            .alert(isPresented: $basket.showError) {
+                Alert(title: Text("Error"), message: Text(basket.basketError?.description ?? "" ), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }

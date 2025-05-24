@@ -9,6 +9,9 @@ import Foundation
 
 final class BasketViewModel: ObservableObject {
     @Published var items: [Drink] = []
+    @Published var basketError: AppError?
+    @Published var showError = false
+    
     private let firebaseRepository = FirebaseRepository()
     
     func add(drink: Drink){
@@ -26,8 +29,16 @@ final class BasketViewModel: ObservableObject {
     }
     
     func createOrder(for user: User?) async{
-        guard items.isEmpty == false else { return }
-        guard let user = user else { return }
+        guard items.isEmpty == false else {
+            basketError = .EmptyBasketError
+            showError = true
+            return
+        }
+        guard let user = user else {
+            basketError = .NoUserError
+            showError = true
+            return
+        }
         
         let order = Order(
             id: UUID().uuidString,
